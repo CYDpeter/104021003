@@ -8,6 +8,8 @@ public class Ex5 {
 		int a = scn.nextInt();
 		System.out.print("請輸入第二個數");
 		int b = scn.nextInt();
+		
+		
 
 	}
 
