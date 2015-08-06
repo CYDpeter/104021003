@@ -7,7 +7,7 @@ public class Ex1 {
 		System.out.print("½Ð¿é¤J13");
 		int a = scn.nextInt();
 		int sum = 0;
-		for(a=13;a<=100&&a>=13;a=a+1){
+		for(a=13;a<=1399&&a>=13;a=a+1){
 			sum = sum+a;			
 		}
 		System.out.print("Sum="+sum);
