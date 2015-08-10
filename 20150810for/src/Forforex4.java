@@ -10,7 +10,7 @@ public class Forforex4 {
 		for(int i=0;i<n;i++){
 			System.out.println();
 			for(int j=0;j<n-i-1;j++){
-				System.out.print("#");
+				System.out.print(" ");
 			}
 			for(int m=0;m<=2*i;m++){
 				System.out.print("*");
@@ -19,7 +19,7 @@ public class Forforex4 {
 		for(int i=n-2;i>=0;i--){
 			System.out.println();
 			for(int j=0;j<n-i-1;j++){
-				System.out.print("#");
+				System.out.print(" ");
 			}
 			for(int m=0;m<=2*i;m++){
 				System.out.print("*");
