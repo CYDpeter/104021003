@@ -11,7 +11,7 @@ public class Whileex1 {
 			k = (float)((int)k+k*0.15);
 			m++;
 		}
-		System.out.print("約"+m+"個小時，這個時間到達大於等於水位 ");
+		System.out.print("約"+m+"個小時，這個時間到達大於等於水位，增加水位為 "+k);
 	}
 
 }
