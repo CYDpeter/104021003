@@ -1,0 +1,69 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Arrayex3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn = new Scanner(System.in);
+		Random rnd = new Random();
+		int count = 0;// 從0開始
+		int[] data = new int[10];// 要10個變數
+		int i, j, o,z = 0;// i從0開始
+		boolean flag = false;
+		while (z < 10) {
+			data[z] = rnd.nextInt(100) + 1;
+			flag = false;
+			for (o = 0; o < z; o++) {
+				if (data[z] == data[o]) {
+					flag = true;
+				}
+			}
+			if (flag == false) {
+				if (data[z] % 2 == 0) {
+					count++;
+				}
+			}
+			if (flag == false) {
+				z++;
+			}
+		}
+		for (i = 0; i < 10; i++){
+		
+		for (j = i + 1; j < 10; j++){
+			
+		if (data[i] > data[j]) {
+			int v1 = data[i];
+			data[i] = data[j];
+			data[j] = v1;
+		}
+		}
+		}
+
+		int p = 0;// 設p為整數並從0開始
+		while (p < 3) {// while迴圈p做3次(0~2)
+			if (p == 0) {// 假如p為0時
+				System.out.println("有幾個偶數");// 顯示題目
+			}
+			int k = scn.nextInt();// 設k為整數為使用者輸入
+			if (k == count) {// 假如k=亂數中有幾個偶數
+				p = 3;// 此時p=3
+				System.out.print("恭喜猜對");// 顯示猜對並結束迴圈
+			} else {// 若沒猜中
+				if (p < 2) {// 假如j=為0或1(第二次猜為0第三次猜為1)
+					System.out.println("請繼續輸入");// 顯示請繼續輸入
+				} else {// 若3次都沒中
+					System.out.println("失敗");// 顯示失敗
+				}
+				p++;// 猜錯就一直做到p<3(3次)
+			}
+		} // 猜錯三次結束迴圈
+		System.out.println("偶數有" + count + "個");// 成功和失敗都顯示共有幾個隨機偶數
+		for (i = 0; i < 10; i++)
+
+		{// 從0開始到9共10並累加
+			System.out.println(data[i]);// 顯示所有隨機亂數
+		}
+
+}
+	}
