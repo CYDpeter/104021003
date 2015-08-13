@@ -3,7 +3,7 @@ public class Myself {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		star();
-		System.out.print("Angel");
+		System.out.print("You Are My Angel");
 		star();
 	}
 
