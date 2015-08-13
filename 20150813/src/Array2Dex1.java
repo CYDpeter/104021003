@@ -23,21 +23,24 @@ public class Array2Dex1 {
 		for (int i = 0; i < n; i++) {
 			System.out.println(name[i] + "\t" + data[i][0] + "\t" + data[i][1] + "\t" + data[i][2] + "\t" + data[i][3]);
 		}
+		int count = 0;
 		for (int i = 0; i < n; i++) {
 			if (data[i][3] < 60) {
 				System.out.println(name[i] + "ぃの");
+				count++;
 			}
 		}
+		System.out.println("ぃの计 : "+count+" ");
 		for (int i = 0; i < n; i++) {
 			if (data[i][3] < min) {
-				min = data[i][3];
-				System.out.println("程だ" + min);
+				min = data[i][3];				
 			} else {
 				if (data[i][3] > Max) {
 					Max = data[i][3];
-					System.out.println("程蔼だ" + Max);
 				}
 			}
 		}
+		System.out.println("程だ" + min);
+		System.out.println("程蔼だ" + Max);
 	}
 }
