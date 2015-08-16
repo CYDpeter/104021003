@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Home3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn = new Scanner(System.in);
+		System.out.print("輸入三角形底");
+		float b = scn.nextFloat();
+		System.out.println("輸入三角形高");
+		float h = scn.nextFloat();
+		float a = b * h / 2;
+		System.out.println("三角形面積為" + a);
+	}
+
+}
