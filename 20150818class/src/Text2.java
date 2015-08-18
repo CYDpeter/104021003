@@ -7,10 +7,10 @@ public class Text2 {
 		Scanner scn = new Scanner(System.in);
 		System.out.print("請輸入您有幾門課?");
 		int n = scn.nextInt();
-		Course cousData[] = new Course[n];
+		Course2 cousData[] = new Course2[n];
 		for (int i = 0; i < n; i++) {
 			System.out.print("請輸入課程名稱，編號與學分");
-			cousData[i] = new Course(scn.next(), scn.next(), scn.nextInt());
+			cousData[i] = new Course2(scn.next(), scn.next(), scn.nextInt());
 			System.out.print("請輸入授課老師");
 			cousData[i].setTeacher(scn.next());
 		}
@@ -43,11 +43,11 @@ public class Text2 {
 
 }
 
-class Course {
+class Course2 {
 	private String cousTitle, cousID, cousDescription, cousLocation, cousTeacher, cousTime;
 	private int cousPoint;
 
-	public Course(String title, String id1, int point) {
+	public Course2(String title, String id1, int point) {
 		cousTitle = title;
 		cousID = id1;
 		cousPoint = point;
