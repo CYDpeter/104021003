@@ -10,12 +10,12 @@ public class Specialtopic2 extends JFrame {
 	private JLabel jlb1 = new JLabel();
 	private JLabel jlb2 = new JLabel();// 標籤物件
 	private JLabel jlbC = new JLabel();
-
 	private JLabel jlbB = new JLabel();
+	
 	private int j, v, a;
 	private Container cp;// 宣告一個視窗盤子(容器)
-	private ImageIcon img[] = new ImageIcon[3];// 建立ImageIcon陣列
-	private String fName[] = { "image0", "image1", "image2" };
+	private ImageIcon img[] = new ImageIcon[4];// 建立ImageIcon陣列
+	private String fName[] = { "image0", "image1", "image2","image3" };
 	private Timer t1;
 	private String str = "按開始";
 	int count = 0;
@@ -29,23 +29,23 @@ public class Specialtopic2 extends JFrame {
 	private void initComp() {
 		t1 = new Timer(150, new ActionListener() {
 			public void actionPerformed(ActionEvent ae) {
-				j = rnd.nextInt(3);
-				v = rnd.nextInt(3);
-				a = rnd.nextInt(3);
+				j = rnd.nextInt(4);
+				v = rnd.nextInt(4);
+				a = rnd.nextInt(4);
 				jlb.setIcon(img[j]);
 				jlb1.setIcon(img[v]);
 				jlb2.setIcon(img[a]);
 			}
 		});
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 4; i++) {
 			img[i] = new ImageIcon("E:\\" + fName[i] + ".jpg");
 		}
 		jlb.setIcon(img[0]);
-		jlb.setBounds(15, 60, 146, 250);
+		jlb.setBounds(40,75,140, 192);
 		jlb1.setIcon(img[1]);
-		jlb1.setBounds(180, 60, 146, 250);
+		jlb1.setBounds(183,75,140,192);
 		jlb2.setIcon(img[2]);
-		jlb2.setBounds(338, 60, 146, 250);
+		jlb2.setBounds(325,75,140,192);
 
 		add(jlb);
 		add(jlb1);
@@ -53,13 +53,13 @@ public class Specialtopic2 extends JFrame {
 
 		jlbC.setOpaque(true);
 		((JPanel) this.getContentPane()).setOpaque(false);
-		ImageIcon img = new ImageIcon("E://555.jpg");
+		ImageIcon img = new ImageIcon("E://13579.jpg");
 		JLabel background = new JLabel(img);
 		this.getLayeredPane().add(background, new Integer(Integer.MIN_VALUE));
 		background.setBounds(0, 0, img.getIconWidth(), img.getIconHeight());
 
 		cp = this.getContentPane();// 取得視窗的 盤子(容器) 來放置各種元件
-		this.setBounds(150, 100, 500, 400);// 設定視窗的初始位置和大小
+		this.setBounds(200,10,510,890);// 設定視窗的初始位置和大小
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);// 設定視窗按X就結束執行
 		cp.setLayout(null);// 不使用視窗布局類別
 		
